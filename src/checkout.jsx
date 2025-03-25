@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './checkout.css';
-
+import CheckoutHeader from './checkoutHeader';
 const checkout = () => {
   const [cartItems, setCartItems] = useState([
     { 
@@ -53,7 +53,7 @@ const checkout = () => {
 
   return (
     <div>
-    <checkoutHeader/>
+    <CheckoutHeader/>
     <div className="container-fluid checkout-page">
       <div className="row">
         <div className="col-md-7 checkout-form">
