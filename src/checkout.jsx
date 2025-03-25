@@ -52,9 +52,10 @@ const checkout = () => {
   };
 
   return (
-    <div>
-    <CheckoutHeader/>
+    
+    
     <div className="container-fluid checkout-page">
+      <CheckoutHeader/>
       <div className="row">
         <div className="col-md-7 checkout-form">
           <h4 className="mb-4">Have an account? <a href="#" className="text-primary">Login</a> (Optional)</h4>
@@ -187,7 +188,7 @@ const checkout = () => {
         </div>
       </div>
     </div>
-    </div>
+    
   );
 };
 
