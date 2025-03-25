@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, ShoppingCart, ChevronDown } from 'lucide-react';
+import tcjLogo from "../assets/tcj_logo.png"; // Use correct relative path
 
 
 const Header = ({ cartItems, onCartClick }) => {
@@ -11,7 +12,7 @@ const Header = ({ cartItems, onCartClick }) => {
       <div className="header-content">
         {/* Logo */}
         <div className="logo">
-        <img src={`${process.env.PUBLIC_URL}/tcj_logo.png`} alt="TCJ Auto Supply" className="logo-image" />
+        <img src={tcjLogo} alt="TCJ Auto Supply" className="logo-image" />
         </div>
         
         {/* Search Bar */}
