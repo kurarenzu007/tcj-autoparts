@@ -52,6 +52,8 @@ const checkout = () => {
   };
 
   return (
+    <div>
+    <checkoutHeader/>
     <div className="container-fluid checkout-page">
       <div className="row">
         <div className="col-md-7 checkout-form">
@@ -184,6 +186,7 @@ const checkout = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };

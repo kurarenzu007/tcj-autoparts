@@ -11,7 +11,7 @@ const Header = ({ cartItems, onCartClick }) => {
       <div className="header-content">
         {/* Logo */}
         <div className="logo">
-          <img src="/tcj_logo.png" alt="TCJ Auto Supply" className="logo-image" />
+        <img src={`${process.env.PUBLIC_URL}/tcj_logo.png`} alt="TCJ Auto Supply" className="logo-image" />
         </div>
         
         {/* Search Bar */}

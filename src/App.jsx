@@ -6,13 +6,13 @@ import './App.css';
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        
-        <Route path="/" element={<HomePage />} />
-        <Route path="/checkout" element={<Checkout />} />
-      </Routes>
-    </Router>
+    <Router basename="/Spareparts-Hub"> {/* Set the correct basename */}
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/checkout" element={<Checkout />} />
+    </Routes>
+  </Router>
+  
     
   );
 };
