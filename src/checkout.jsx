@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './checkout.css';
 import CheckoutHeader from './checkoutHeader';
 
+
 const checkout = () => {
   const [cartItems, setCartItems] = useState([
     { 
