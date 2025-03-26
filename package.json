@@ -1,20 +1,22 @@
 {
-  "homepage": "https://kurarenzu007.github.io/Spareparts-Hub",
   "name": "spareparts_hub",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://kurarenzu007.github.io/tcj-autoparts/",
   "scripts": {
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

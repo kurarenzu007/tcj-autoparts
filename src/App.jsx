@@ -1,19 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './Homepage';
-import Checkout from "./checkout";
-import './App.css';
+import HomePage from './pages/Homepage';
+import Checkout from './pages/Checkout';
+import ProductDetails from './pages/ProductDetails';
+import BrandPage from './pages/BrandPage';
+import './styles/App.css';
 
 const App = () => {
   return (
-    <Router basename="/Spareparts-Hub"> {/* Set the correct basename */}
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/checkout" element={<Checkout />} />
-    </Routes>
-  </Router>
-  
-    
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="/brands/:brand" element={<BrandPage />} />
+      </Routes>
+    </Router>
   );
 };
 

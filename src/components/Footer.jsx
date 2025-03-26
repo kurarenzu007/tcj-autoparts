@@ -28,10 +28,10 @@ const Footer = () => {
           </div>
           <div className="footer-column">
             <h3>Contact Information</h3>
-            <p>123 Auto Parts Street</p>
-            <p>Manila, Philippines</p>
+            <p>TCJ AUTO SUPPLY</p>
+            <p>Pampangga, Philippines</p>
             <p>Phone: (123) 456-7890</p>
-            <p>Email: info@tjcautosupply.com</p>
+            <p>Email: @cvsu.edu.ph</p>
           </div>
         </div>
         <div className="footer-bottom">

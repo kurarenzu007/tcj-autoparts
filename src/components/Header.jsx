@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import { Search, ShoppingCart, ChevronDown } from 'lucide-react';
 import tcjLogo from "../assets/tcj_logo.png"; // Use correct relative path
-
+import { useNavigate } from 'react-router-dom';
 
 const Header = ({ cartItems, onCartClick }) => {
   const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
   const categories = ["Brakes", "Suspension", "Engine", "Transmission", "Electrical", "Exhaust", "Cooling"];
+
+  const handleLogoClick = () => {
+    navigate('/');
+  };
 
   return (
     <header className="header">
       <div className="header-content">
         {/* Logo */}
-        <div className="logo">
-        <img src={tcjLogo} alt="TCJ Auto Supply" className="logo-image" />
+        <div className="logo" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
+          <img src={tcjLogo} alt="TCJ Auto Supply" className="logo-image" />
         </div>
         
         {/* Search Bar */}
@@ -36,9 +41,9 @@ const Header = ({ cartItems, onCartClick }) => {
             <div><a href="/account" className="account-link">My account</a></div>
           </div>
           {/* Make the cart clickable */}
-          <div className="cart" onClick={onCartClick} style={{ cursor: 'pointer' }}>
+          <div className={`cart ${cartItems > 0 ? 'has-items' : ''}`} onClick={onCartClick}>
             <ShoppingCart size={24} />
-            <span className="cart-count">{cartItems}</span>
+            {cartItems > 0 && <span className="cart-count">{cartItems}</span>}
           </div>
         </div>
       </div>
